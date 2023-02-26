@@ -1,0 +1,284 @@
+/*  
+
+- Light slate blue (background): 
+- Light royal blue (background): 
+
+- Violet blue (circle): 
+- Persian blue (circle): 
+
+ */
+
+ @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
+ /* RESET */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html {
+        font-size: 62.5%;
+    }
+ button {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+ }
+ /* END RESET */
+
+ /* CUSTOME PROPERTIES */
+    :root {
+        /* Colors */
+        
+            /* primary */
+                --LIGHT-RED: hsl(0, 100%, 67%);
+                --ORANGEY-YELLOW: hsl(39, 100%, 56%);
+                --GREEN-TEAL: hsl(166, 100%, 37%);
+                --COBALT-BLUE: hsl(234, 85%, 45%);
+            /* end primary */
+            
+            /* gradients */
+                --LIGHT-SLATE-BLUE: hsl(252, 100%, 67%);
+                --LIGHT-ROYAL-BLUE: hsl(241, 81%, 54%);
+                --VIOLET-BLUE: hsla(256, 72%, 46%, 1);
+                --PERSIAN-BLUE: hsla(241, 72%, 46%, 0.3);
+            /* end gradients */
+            
+            /* neutrals */
+                --WHITE: hsl(0, 0%, 100%);
+                --PALE-BLUE: hsl(221, 100%, 96%);
+                --LIGHT-LAVENDER: hsl(241, 100%, 89%);
+                --DARK-GRAY-BLUE: hsl(224, 30%, 27%);
+            /* end neutrals */
+
+        /* End Colors */
+
+        /* Typography */
+            --FF: 'Hanken Grotesk', sans-serif;
+            --FS: 1.8rem;
+            --REGULAR: 500;
+            --BOLD: 700;
+            --BOLDER: 800;
+        /* End Typography */
+    }
+ /* END CUSTOME PROPERTIES */
+
+ /* GENERAL STYLES */
+    body {
+        font-family: var(--FF);
+        font-size: var(--FS);
+        background-color: var(--PALE-BLUE);
+        font-weight: var(--REGULAR);
+        color: var(--LIGHT-LAVENDER);
+    }
+
+    footer {
+        margin: 4rem;
+    }
+/* END GENERAL STYLES */
+
+/* UTILITYS */
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.hidden {
+    display: none;
+}
+/* END UTILITYS */
+
+/* BLOCKS */
+    
+    /* Card */
+        .card {
+            background-color: var(--WHITE);
+        }
+    /* End Card */
+    
+    /* Score */
+        .score {
+            background-color: var(--COBALT-BLUE);
+            background-image: linear-gradient(to top, var(--LIGHT-ROYAL-BLUE), var(--LIGHT-SLATE-BLUE) );
+            border-radius: 0 0 3rem 3rem;
+            padding: 5%;
+            text-align: center;
+            padding-bottom: 12%;
+        }
+    /* End Score */
+
+    /* Results */
+        .results {
+            padding: 10%;
+           font-weight: var(--BOLD);
+        }
+    /* End Results */
+    
+    /* Button */
+        .btn {
+            width: 100%;
+            padding: 4%;
+            background-color: transparent;
+            border: none;
+            outline: transparent;
+            border-radius: 3rem;
+            cursor: pointer;
+        }
+    /* End Button */
+/* END BLOCKS */
+
+/* ELEMENTS */
+        /* Score */
+            .score__subtitle {
+                font-size: 2rem;
+                margin-bottom: 3rem;
+            }
+
+            .score__total {
+                margin: 0 auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                width: 15rem;
+                height: 15rem;
+                border-radius: 50%;
+                background-color: var(--VIOLET-BLUE);
+                background-image: linear-gradient(var(--VIOLET-BLUE), var(--LIGHT-ROYAL-BLUE));
+                margin-bottom: 3rem;
+            }
+
+            .score__result {
+                font-size: 8rem;
+                color: var(--PALE-BLUE);
+                font-weight: var(--BOLDER);
+            }
+            .score__info {
+                color: var(--LIGHT-LAVENDER);
+            }
+
+            .score__word {
+                color: var(--PALE-BLUE);
+                font-size: 3rem;
+                margin-bottom: 1.5rem;
+            }
+        /* End Score */
+
+        /* Results */
+            .results__title {
+                color: var(--DARK-GRAY-BLUE);
+                font-weight: var(--BOLDER);
+            }
+            .results__items {
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+                padding: 8% 0;
+               
+            }
+            .results__item {
+                display: flex;
+                justify-content: space-between;
+                align-items: center; 
+                padding: 4%;
+                border-radius: 1rem;
+            }
+            
+    
+        /* End Results */
+/* END ELEMENTS */
+
+/* MODIFIERS */
+.accent--black {
+    color: var(--DARK-GRAY-BLUE);
+}
+.accent--red {
+     color: var(--LIGHT-RED);
+}
+.accent--yellow {
+    color: var(--ORANGEY-YELLOW);
+}
+.accent--green {
+    color: var(--GREEN-TEAL);
+}
+.accent--blue {
+    color: var(--COBALT-BLUE);
+}
+
+.bg--red {
+    background-color: hsla(0, 100%, 67%, 0.085);
+}
+.bg--yellow {
+    background-color: hsla(39, 100%, 56%, 0.085);
+}
+.bg--green {
+    background-color: hsla(166, 100%, 37%, 0.085);
+}
+.bg--blue {
+    background-color: hsla(234, 85%, 45%, 0.085);
+}
+
+.btn--blue {
+    background-color: var(--DARK-GRAY-BLUE);
+    color: var(--PALE-BLUE);
+    font-weight: var(--BOLD);
+}
+
+.btn--blue:hover {
+    background-image: linear-gradient(to top, var(--LIGHT-ROYAL-BLUE), var(--VIOLET-BLUE));
+}
+/* END MODIFIERS */
+
+/* MEDIAS */
+
+
+@media screen and (min-width: 850px) {
+    /* GENERASL STYLES */
+    main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 6%;
+    }
+    /* END GENERAL STYLES */
+
+    /* Card */
+    .card {
+        display: flex;
+        width: 60%;
+        border-radius: 3rem;
+    }
+
+    .card__header {
+      width: 70%;
+        display: flex;
+    }
+
+    .card__body {
+        width: 100%;
+        padding: 6%;
+    }
+    /* End Card */
+
+   /* Score */
+    .score {
+       
+        border-radius: 3rem;
+        padding: 5%;
+        padding-bottom: 12%;
+    }
+    /* End Score */
+
+    /* Results */
+    .results {
+        padding: 0;
+    }
+    .results__items {
+        padding: 0;
+        padding-bottom: 12%;
+    }
+    /* End Results */
+}

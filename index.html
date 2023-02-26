@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Results summary component</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+      color: black;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+
+  <main>
+    <article class="card">
+      <section class="card__header">
+        <section class="score">
+          <h3 class="score__subtitle">Your Result</h3>
+
+          <section class="score__total">
+            <h2 id="averageScore" class="score__result" aria-roledescription="Total score">76</h2>
+            <p class="score__info">of 100</p>
+          </section>
+
+          <h2 class="score__word">Great</h2>
+          <p class="score__info">You scored higher than 65% of the people who have taken these tests.</p>
+        </section>
+      </section>
+
+      <section class="card__body">
+
+        <section class="results">
+
+          <h3 class="results__title">Summary</h3>
+
+          <section id="resultsItems" class="results__items">
+            <!-- ITEM TO CLONE  -->
+            <section class="clone results__item hidden">
+              <p  class="name flex-center"><img id="icon" src="" alt=""> </p>
+              <p class="hidden"><span class="result accent--black"></span> / 100</p>
+            </section>
+
+
+<!--  NOW THE DATA IS LOADED FROM JSON FILE
+            <section class="results__item bg--red">
+              <p class="accent--red flex-center"><img src="assets/images/icon-reaction.svg" alt="red lighting conture"> Reaction</p>
+              <p><span id="reaction" class="accent--black">80</span> / 100</p>
+            </section>
+
+            <section class="results__item bg--yellow">
+              <p class="accent--yellow flex-center"><img src="assets/images/icon-memory.svg" alt="yellow brain conture"> Memory</p>
+              <p><span id="memory" class="accent--black">92</span> / 100</p>
+            </section>
+
+            <section class="results__item bg--green">
+              <p class="accent--green flex-center"><img src="assets/images/icon-verbal.svg" alt="teal talk bubble"> Verbal</p>
+              <p><span id="verbal" class="accent--black">61 </span>/ 100</p>
+            </section>
+
+
+            <section class="results__item bg--blue">
+              <p class="accent--blue flex-center"><img src="assets/images/icon-visual.svg" alt="blue eye conture"> Visual</p>
+              <p><span id="visual" class="accent--black">72</span> / 100</p> -->
+
+            </section>
+
+          </section>
+
+          <button class="btn btn--blue">Continue</button>
+        </section>
+    </article>
+  </main>
+
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Igor</a>.
+    </div>
+  </footer>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
