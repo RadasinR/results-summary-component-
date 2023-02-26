@@ -15,6 +15,7 @@ window.onload = function () {
                 
                 let icon = document.createElement("img");
                 icon.src = item.icon;
+                icon.alt = item.category + " icon";
                 name.appendChild(icon);
 
                 name.innerHTML += item.category;
@@ -25,15 +26,19 @@ window.onload = function () {
                 switch(item.category) {
                     case "Reaction":
                         resultItem.classList.add("bg--red");
+                        name.classList.add("accent--red");
                         break;
                     case "Memory":
                         resultItem.classList.add("bg--yellow");
+                        name.classList.add("accent--yellow");
                         break;
                     case "Verbal":
                         resultItem.classList.add("bg--green");
+                        name.classList.add("accent--green");
                         break;
                     case "Visual":
                         resultItem.classList.add("bg--blue");
+                        name.classList.add("accent--blue");
                         break;
                 }
 
